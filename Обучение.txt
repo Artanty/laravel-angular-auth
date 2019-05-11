@@ -27,6 +27,48 @@ npm install bootstrap
 
 
 5. Разработка.
+cd frontend
+ng g c components/navbar
+ng g c components/login
+ng g c components/signup
+ng g c components/password/request-reset
+ng g c components/password/reset //вроде не надо
+ng g c components/password/response-reset
+ng g c components/profile/
+
+
+6. laravel - настраиваем jwt
+php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+
+php artisan jwt:secret
+
+ng g m app-routing --flat // флэт - значит не создавать собственную папку
+
+----
+валидация формы в одну строку:
+[disabled]="!loginForm.valid"
+
+----
+7. laravel
+добавляем в ларавел посредника, который пропускает запросы
+php artisan make:middleware CORS
+добавляем в него хэдэры.
+Добавляем в kernel.php строку в protected $routeMiddleware
+'CORS' => \App\Http\Middleware\CORS::class,
+---
+если ларавел не может найти jwt - вставляем в User.php:
+use Tymon\JWTAuth\Contracts\JWTSubject;
+
+---
+лечение
+MassAssignmentException
+в модели
+---
+refactoring the code
+
+делаем сервис, чтобы в него сгрузить методы
+ng g s Services/Jarvis --module=app
+
 
 
 
