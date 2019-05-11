@@ -69,13 +69,26 @@ refactoring the code
 делаем сервис, чтобы в него сгрузить методы
 ng g s Services/Jarvis --module=app
 
+now component doesn't care about http calls
 
+делаем сервис для токенов:
+ng g s services/Token --module=app
+
+----
+чтобы сохранить в локал сторадж
+handle(token){
+	this.set(token);
+}
+
+set(token){
+	localStorage.setItem('token',token);
+}
 
 
 
 остановился на:
-7:54
-https://www.udemy.com/angular-laravel-single-page-app-with-authentication-and-password-reset/learn/lecture/10341548#overview
+4:28
+https://www.udemy.com/angular-laravel-single-page-app-with-authentication-and-password-reset/learn/lecture/10341584#overview
 
 
 
