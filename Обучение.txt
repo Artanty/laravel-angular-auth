@@ -1,0 +1,43 @@
+1. Ставим ларавел:
+cd lara-auth
+composer create-project Laravel/Laravel backend
+
+2. Git init
+https://github.com/new
+git init
+git status
+git add .
+git commit -m"Initial Commit"
+
+git remote add origin https://github.com/Artanty/laravel-angular-auth.git
+git push -u origin master
+
+3. Ставим JWT
+в composer.json в require добавляем:
+"tymon/jwt-auth": "^1.0.0-rc.2"
+cd backend
+composer update
+
+4. Ставим bootstrap через терминал:
+cd ..
+cd frontend
+npm install bootstrap
+сюда src/styles.css добавляем:
+@import '~bootstrap/dist/css/bootstrap.css';
+
+
+5. Разработка.
+
+
+
+
+остановился на:
+7:54
+https://www.udemy.com/angular-laravel-single-page-app-with-authentication-and-password-reset/learn/lecture/10341548#overview
+
+
+
+=====
+глянуть этого чела:
+https://www.youtube.com/watch?v=efrp-eW-QcU
+https://learn.javascript.ru/screencast/angular#rxjs-utility
