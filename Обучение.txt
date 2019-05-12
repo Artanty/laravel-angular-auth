@@ -125,6 +125,9 @@ use App\User;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ResetPasswordMail; //письмо само.
 
+----
+php artisan make:controller ChangePasswordController
+php artisan make:request ChangePasswordRequest
 
 
 
@@ -132,8 +135,8 @@ use App\Mail\ResetPasswordMail; //письмо само.
 
 
 остановился на:
-10:48
-https://www.udemy.com/angular-laravel-single-page-app-with-authentication-and-password-reset/learn/lecture/10341584#overview
+12:06
+https://www.udemy.com/angular-laravel-single-page-app-with-authentication-and-password-reset/learn/lecture/10341624#overview
 
 
 
