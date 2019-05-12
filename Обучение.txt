@@ -64,7 +64,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 MassAssignmentException
 в модели
 ---
-refactoring the code
+8. refactoring the code angular
 
 делаем сервис, чтобы в него сгрузить методы
 ng g s Services/Jarvis --module=app
@@ -75,7 +75,7 @@ now component doesn't care about http calls
 ng g s services/Token --module=app
 
 ----
-чтобы сохранить в локал сторадж
+9. чтобы сохранить в локал сторадж angular
 handle(token){
 	this.set(token);
 }
@@ -87,7 +87,7 @@ set(token){
 
 
 остановился на:
-4:28
+10:48
 https://www.udemy.com/angular-laravel-single-page-app-with-authentication-and-password-reset/learn/lecture/10341584#overview
 
 
