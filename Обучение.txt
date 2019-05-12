@@ -75,7 +75,7 @@ now component doesn't care about http calls
 ng g s services/Token --module=app
 
 ----
-9. чтобы сохранить в локал сторадж angular
+9. чтобы сохранить токен в локал сторадж angular
 handle(token){
 	this.set(token);
 }
@@ -83,6 +83,51 @@ handle(token){
 set(token){
 	localStorage.setItem('token',token);
 }
+
+10. Создаем auth сервис:
+ng g s services/Auth --module=app
+
+если не находит ребенка rxjs - правильно импортить из корня:
+import { BehaviorSubject } from 'rxjs';
+
+11. Профайл
+ng g s services/before-login --module=app
+ng g s services/after-login --module=app
+
+12. password reset function
+back:
+php artisan make:controller ResetPasswordController
+front:
+npm install ng-snotify
+
+back:
+"Response" import:
+use Symfony\Component\HttpFoundation\Response;
+
+Сделать письмо:
+php artisan make:mail ResetPasswordMail --markdown=Email.passwordReset
+
+---
+https://mailtrap.io/inboxes/604609/messages
+вставляем оиз настроек в .env:
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=tls
+
+
+---
+контроллер для отправки письма:
+
+namespace App\Http\Controllers;
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ResetPasswordMail; //письмо само.
+
+
+
+
 
 
 
